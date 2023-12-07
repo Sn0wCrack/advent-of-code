@@ -90,10 +90,6 @@ foreach ($lines as $line) {
 $lowest = null;
 
 foreach ($seeds as $seed) {
-    $start = microtime(true);
-
-    var_dump($seed, $seed['end'] - $seed['start']);
-
     for ($i = $seed['start']; $i <= $seed['end']; ++$i) {
         $identifierToLookup = $i;
         $seedRelationshipIdentifiers = ['seed' => $i];
@@ -116,10 +112,6 @@ foreach ($seeds as $seed) {
             $lowest = $seedRelationshipIdentifiers[HUMIDITY_TO_LOCATION_IDENTIFIER];
         }
     }
-
-    $end = microtime(true);
-
-    var_dump($end - $start);
 }
 
 echo "{$lowest}\n";
