@@ -8,7 +8,7 @@ $part01_input = file('part_01_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPT
 
 echo "Part 01 - " . part01($part01_input) . "\n";
 
-assert(part02($part01_example) === 31, 'Example output does not equal 31');
+assert(part02($part01_example) === 31, 'Part 02 - Example output does not equal 31');
 
 $part02_input = file('part_02_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
