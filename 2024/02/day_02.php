@@ -3,24 +3,6 @@
 const DIRECTION_INCREASING = 'increasing';
 const DIRECTION_DECREASING = 'decreasing';
 
-$part01_example = file('part_01_example.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-echo "Part 01 Example - " . part01($part01_example) . "\n";
-
-echo "Part 02 Example - " . part02($part01_example) . "\n";
-
-assert(part01($part01_example) === 2, 'Part 01 - Example output does not equal 2');
-
-$part01_input = file('part_01_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-echo "Part 01 - " . part01($part01_input) . "\n";
-
-assert(part02($part01_example) === 4, 'Part 02 - Example output does not equal 0');
-
-$part02_input = file('part_02_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-echo "Part 02 - " . part02($part02_input) . "\n";
-
 /**
  * @param string[] $input
  */
@@ -128,3 +110,31 @@ function generate_level_mutations(array $levels): array
 
     return $mutations;
 }
+
+function main()
+{
+    $part01_example_input = file('part_01_example.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    $part01_example_output = part01($part01_example_input);
+    $part02_example_output = part02($part01_example_input);
+
+    echo "Part 01 Example - {$part01_example_output}\n";
+    echo "Part 02 Example - {$part02_example_output}\n";
+    
+    assert($part01_example_output === 2, 'Part 01 - Example output does not equal 2');
+    assert($part02_example_output === 4, 'Part 02 - Example output does not equal 4');
+
+    $part01_input = file('part_01_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    $part01_output = part01($part01_input);
+
+    echo "Part 01 - {$part01_output}\n";
+    
+    $part02_input = file('part_02_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    $part02_output = part02($part02_input);
+
+    echo "Part 02 - {$part02_output}\n";
+}
+
+main();
