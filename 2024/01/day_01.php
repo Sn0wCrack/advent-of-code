@@ -14,7 +14,8 @@ $part02_input = file('part_02_input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPT
 
 echo "Part 02 - " . part02($part02_input) . "\n";
 
-function part01(array $input): int {
+function part01(array $input): int
+{
     $total = 0;
 
     $leftList = [];
@@ -44,7 +45,8 @@ function part01(array $input): int {
     return $total;
 }
 
-function part02(array $input): int {
+function part02(array $input): int
+{
     $total = 0;
 
     $leftList = [];
