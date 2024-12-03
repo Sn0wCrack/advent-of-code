@@ -24,7 +24,7 @@ function part01(string $input): ?int
 }
 
 
-function part02(string $input): int
+function part02(string $input): ?int
 {
     $result = preg_match_all('/(do\(\)|don\'t\(\)|mul\((?P<first>\d{1,3}),(?P<second>\d{1,3})\))/im', $input, $matches, PREG_SET_ORDER);
 
