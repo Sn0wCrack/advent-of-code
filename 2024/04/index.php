@@ -2,7 +2,7 @@
 
 const LETTERS = ['M', 'A', 'S'];
 
-// Search in all directions up to 3 units from the current X
+// Search in all directions up to 3 units from the current character
 const PART_01_SEARCH_OFFSETS = [
     [[0, 1], [0, 2], [0, 3]], // right
     [[1, 1], [2, 2], [3, 3]], // diagonal-down-right
