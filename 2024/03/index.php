@@ -72,7 +72,7 @@ function main()
     echo "Part 02 Example - {$part02_example_output}\n";
     
     assert($part01_example_output === 161, 'Part 01 - Example output does not equal 161');
-    assert($part02_example_output === 48, 'Part 02 - Example output does not equal 0');
+    assert($part02_example_output === 48, 'Part 02 - Example output does not equal 48');
 
     $part01_input = file_get_contents('part_01_input.txt');
     
