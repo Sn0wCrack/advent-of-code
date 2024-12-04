@@ -23,8 +23,9 @@ const PART_02_SEARCH_OFFSETS = [
 ];
 
 // Basically if all sorrounding characters aren't in one of the below combos, it's not an X-MAS
+// First character is down-right, second is down-left, etc since the order we search and build our string is known
 const PART_02_VALID_COMBINATIONS = [
-    'MSSM',
+    'MSSM', 
     'MMSS',
     'SSMM',
     'SMMS',
